@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashContro">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="table" prefHeight="453.0" prefWidth="380.0" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowSpan="3">
+        <columns>
+          <TableColumn id="matricule" fx:id="col_mat" prefWidth="102.0" text="matricule" />
+          <TableColumn id="nom" fx:id="col_nom" prefWidth="93.0" text="nom" />
+            <TableColumn id="email" fx:id="col_email" prefWidth="128.0" text="email" />
+            <TableColumn id="annee" fx:id="col_annee" prefWidth="119.0" text="annee" />
+            <TableColumn id="salaire" fx:id="col_salaire" prefWidth="99.0" text="salaire" />
+            <TableColumn id="salaire" fx:id="col_categorie" prefWidth="121.0" text="categorie" />
+        </columns>
+      </TableView>
+      <Button fx:id="importBtn" mnemonicParsing="false" onAction="#handleImportButtonAction" style="-fx-background-color: #49ebd0;" text="Importer" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="remove" mnemonicParsing="false" onAction="#Supprimer" style="-fx-background-color: #de2a2a;" text="Supprimer" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="4">
+         <children>
+            <TextField fx:id="txt_email" layoutX="14.0" layoutY="110.0" prefHeight="31.0" prefWidth="199.0" promptText="Email">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_annee" layoutX="14.0" layoutY="150.0" prefHeight="31.0" prefWidth="199.0" promptText=" Annee">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_nom" layoutX="14.0" layoutY="67.0" prefHeight="31.0" prefWidth="199.0" promptText="Username">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_salaire" layoutX="14.0" layoutY="193.0" prefHeight="31.0" prefWidth="199.0" promptText=" Salaire">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_matricule" layoutX="14.0" layoutY="26.0" prefHeight="31.0" prefWidth="199.0" promptText="Matricule">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <Button fx:id="ajouter" layoutX="18.0" layoutY="328.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #34eb83;" text="Ajouter salarié" />
+            <TextField fx:id="txt_categorie" layoutX="14.0" layoutY="234.0" prefHeight="31.0" prefWidth="199.0" promptText=" Categorie">
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <Button layoutX="81.0" layoutY="396.0" mnemonicParsing="false" onAction="#sort" prefHeight="31.0" prefWidth="160.0" text="Lister par ancienneté" />
+            <Button fx:id="update" layoutX="185.0" layoutY="328.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #eb8c49;" text="Modifier salarié" />
+         </children>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+      </AnchorPane>
+      <Button fx:id="afficher" mnemonicParsing="false" onAction="#select" text="Afficher" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button fx:id="export" mnemonicParsing="false" onAction="#Export" prefHeight="31.0" prefWidth="85.0" text="exporter" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="79.0" text="Clear" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+   </children>
+</GridPane>

@@ -1,0 +1,6 @@
+Salarie [Matricule=1, Nom=Amine, Email=aminebayar811@gmail., Annee=2004.0, Salaire=400.0, categorie=vendeur]
+Salarie [Matricule=3, Nom=Sami, Email=amine@gmail.com, Annee=2000.0, Salaire=800.0, categorie=employee]
+Salarie [Matricule=8, Nom=amine, Email=aminebayar1@gmail.co, Annee=2004.0, Salaire=420.0, categorie=vendeur]
+Salarie [Matricule=5453, Nom=amine2, Email=baya@gmail.com, Annee=1999.0, Salaire=240.0, categorie=vendeur]
+Salarie [Matricule=5, Nom=hgf, Email=hgh, Annee=2000.0, Salaire=244.0, categorie=hh]
+Salarie [Matricule=5, Nom=hgf, Email=hgh, Annee=2000.0, Salaire=244.0, categorie=hh]
